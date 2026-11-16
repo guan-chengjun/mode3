@@ -1,0 +1,18 @@
+{
+  "name": "ferris-wheel-3d",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "基于 Three.js + Vite 的 3D 摩天轮交互项目：天气系统 / HDRI 光影 / 粒子雨雾 / 体积光",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

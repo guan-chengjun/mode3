@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D 摩天轮 · 天气光影系统</title>
+  <link rel="stylesheet" href="/src/ui/panel.css" />
+</head>
+<body>
+  <!-- 3D 画布挂载点 -->
+  <div id="app"></div>
+
+  <!-- 加载遮罩 -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>场景加载中…</p>
+  </div>
+
+  <!-- 异步资源加载提示 -->
+  <div id="toast" class="hidden"></div>
+
+  <!-- 控制面板 -->
+  <aside id="panel">
+    <h1>🎡 摩天轮控制台</h1>
+
+    <section>
+      <h2>运行控制</h2>
+      <div class="row">
+        <button id="btn-power" class="primary">⏸ 暂停</button>
+        <label class="checkbox">
+          <input type="checkbox" id="chk-autorotate" /> 自动环绕
+        </label>
+      </div>
+      <label class="slider-label">转速 <span id="speed-val">0.25</span> rad/s</label>
+      <input type="range" id="speed-slider" min="0" max="100" value="31" />
+    </section>
+
+    <section>
+      <h2>天气系统</h2>
+      <div id="weather-btns" class="weather-grid"></div>
+    </section>
+
+    <footer>
+      左键拖拽旋转 · 右键平移 · 滚轮缩放<br />
+      可拉近相机，自由透视查看轮体内部结构
+    </footer>
+  </aside>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
